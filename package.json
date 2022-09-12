@@ -1,0 +1,18 @@
+{
+  "name": "playwright-odin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx http-server ./public -p 4400",
+    "test": "PERCY_TOKEN=4562c4b22938f825cf29985ecd4c3658a9a78232a142bdd915dc35167606bc59 percy exec -- npx playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@percy/cli": "^1.10.2",
+    "@percy/playwright": "^1.0.4",
+    "@playwright/test": "^1.25.2"
+  }
+}
