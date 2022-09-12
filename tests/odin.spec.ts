@@ -1,9 +1,9 @@
 import { test, expect } from "@playwright/test";
 import percySnapshot from "@percy/playwright";
 
-test("DND page looks good", async ({ page }) => {
+test("ODIN program page looks good", async ({ page }) => {
   // Wait until page is fully loaded
-  await page.goto("/dnd_homepage_broken.html", { waitUntil: "networkidle" });
+  await page.goto("/odin_program.html", { waitUntil: "networkidle" });
   // Take a snapshot and send to Percy
-  await percySnapshot(page, "DND index page");
+  await percySnapshot(page, "ODIN program page");
 });

@@ -1,0 +1,1344 @@
+/**
+* Theme Name: Mae Child Theme
+* Description: Datter-tema av Mae for Dataforeningens nettsider
+* Author: Miles To Go
+* Author URI: https://milestogo.no
+* Template: mae
+* Version: 1.1.3
+* Text Domain: mae-child-theme
+**/
+/******************************************************************
+LOADING FONT FACES
+******************************************************************/
+@font-face {
+  font-family: 'TTCommons';
+  src: url("https://www.dataforeningen.no/wp-content/themes/dataforeningen/library/fonts/396076_1_0.eot");
+  src: url("library/fonts/396076_1_0.eot?#iefix") format("embedded-opentype"), url("https://www.dataforeningen.no/wp-content/themes/dataforeningen/library/fonts/396076_1_0.woff") format("woff"), url("https://www.dataforeningen.no/wp-content/themes/dataforeningen/library/fonts/396076_1_0.woff2") format("woff2"), url("https://www.dataforeningen.no/wp-content/themes/dataforeningen/library/fonts/396076_1_0.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'TTCommons';
+  src: url("https://www.dataforeningen.no/wp-content/themes/dataforeningen/library/fonts/396076_3_0.eot");
+  src: url("https://www.dataforeningen.no/wp-content/themes/dataforeningen/library/fonts/396076_3_0.eot?#iefix") format("embedded-opentype"), url("https://www.dataforeningen.no/wp-content/themes/dataforeningen/library/fonts/396076_3_0.woff") format("woff"), url("https://www.dataforeningen.no/wp-content/themes/dataforeningen/library/fonts/396076_3_0.woff2") format("woff2"), url("https://www.dataforeningen.no/wp-content/themes/dataforeningen/library/fonts/396076_3_0.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'TTCommons';
+  src: url("https://www.dataforeningen.no/wp-content/themes/dataforeningen/library/fonts/398879_0_0.eot");
+  src: url("https://www.dataforeningen.no/wp-content/themes/dataforeningen/library/fonts/398879_0_0.eot?#iefix") format("embedded-opentype"), url("https://www.dataforeningen.no/wp-content/themes/dataforeningen/library/fonts/398879_0_0.woff") format("woff"), url("https://www.dataforeningen.no/wp-content/themes/dataforeningen/library/fonts/398879_0_0.woff2") format("woff2"), url("https://www.dataforeningen.no/wp-content/themes/dataforeningen/library/fonts/398879_0_0.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'TTCommons';
+  src: url("https://www.dataforeningen.no/wp-content/themes/dataforeningen/library/fonts/398879_1_0.eot");
+  src: url("https://www.dataforeningen.no/wp-content/themes/dataforeningen/library/fonts/398879_1_0.eot?#iefix") format("embedded-opentype"), url("https://www.dataforeningen.no/wp-content/themes/dataforeningen/library/fonts/398879_1_0.woff") format("woff"), url("https://www.dataforeningen.no/wp-content/themes/dataforeningen/library/fonts/398879_1_0.woff2") format("woff2"), url("https://www.dataforeningen.no/wp-content/themes/dataforeningen/library/fonts/398879_1_0.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+/* line 48, sass/style.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote,
+p,
+ul,
+li,
+ol,
+div,
+span {
+  font-family: "TTCommons", Helvetica, Arial, sans-serif !important;
+}
+
+/* line 64, sass/style.scss */
+h1 {
+  font-size: 48px;
+}
+
+/* line 66, sass/style.scss */
+h2 {
+  font-size: 36px;
+}
+
+/* line 68, sass/style.scss */
+h3 {
+  font-size: 28px;
+}
+
+/* line 70, sass/style.scss */
+h4 {
+  font-size: 20px;
+}
+
+/* line 72, sass/style.scss */
+p {
+  font-size: 16px;
+}
+
+/* line 74, sass/style.scss */
+body {
+  background: white;
+}
+
+/* line 78, sass/style.scss */
+a:link,
+a:visited {
+  text-decoration: underline;
+}
+
+/* line 83, sass/style.scss */
+a.speakers__person,
+a.speakers__person:visited {
+  text-decoration: none;
+}
+
+/* line 88, sass/style.scss */
+a.speakers__person .speakers__name {
+  text-decoration: underline;
+}
+
+/* line 92, sass/style.scss */
+.schedule__speaker-name {
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+/**** Header ****/
+/* line 98, sass/style.scss */
+.site__header-top {
+  background: #E15D3C;
+}
+
+@media (max-width: 765px) {
+  /* line 106, sass/style.scss */
+  .site-header__branding .site-branding img,
+  .site-sidenav__branding .site-branding img {
+    max-width: 270px;
+    height: auto;
+  }
+}
+
+@media (max-width: 765px) {
+  /* line 114, sass/style.scss */
+  .site-header__branding {
+    display: flex;
+    align-items: center;
+  }
+}
+
+/***** Mobile menu adjustments *****/
+/* line 124, sass/style.scss */
+.site-header__mobile.hidden-lg-up {
+  padding-right: 24px;
+}
+
+/* line 128, sass/style.scss */
+.side-menu--display .site-sidenav__mobile--trigger {
+  top: 12px;
+  max-width: 30px;
+  right: 3px;
+}
+
+/* line 135, sass/style.scss */
+.side-menu--display .site-header__elements,
+.side-menu--display .site-content {
+  filter: blur(10px);
+}
+
+/* line 144, sass/style.scss */
+.test {
+  color: red;
+}
+
+/* line 150, sass/style.scss */
+.menu-item a:link,
+.menu-item a:visited {
+  text-decoration: none !important;
+}
+
+/* line 155, sass/style.scss */
+.background_image_desktop {
+  width: 100%;
+}
+
+/* line 159, sass/style.scss */
+section.section--singular {
+  padding-top: 121px;
+}
+
+/* line 163, sass/style.scss */
+.home .hero_images .background_image {
+  width: 100% !important;
+}
+
+/* line 167, sass/style.scss */
+.home .content {
+  background: #E15D3C;
+  color: white;
+  max-width: none;
+}
+
+/* line 173, sass/style.scss */
+.home .content h1,
+.home .content h2,
+.home .content h3,
+.home .content h4,
+.home .content p,
+.home .content ul,
+.home .content li,
+.home .content ol {
+  max-width: 1170px;
+  color: white;
+  margin: 0.5rem auto 1rem auto;
+}
+
+/* line 186, sass/style.scss */
+.home .content a,
+.home .content a:link,
+.home .content a:visited {
+  color: white;
+}
+
+/* line 192, sass/style.scss */
+.home .site__title.site__title_subtitle {
+  margin: 0;
+  padding: 48px 0px 16px 0px;
+  background: #000;
+  color: white;
+}
+
+/* line 199, sass/style.scss */
+.schedule__event {
+  text-decoration: underline;
+}
+
+/* line 203, sass/style.scss */
+.btn.dark,
+.btn.btn--primary.dark,
+.btn.btn--secondary.dark {
+  color: white !important;
+}
+
+/* line 209, sass/style.scss */
+.btn.light,
+.btn.btn--primary.light,
+.btn.btn--secondary.light {
+  color: black !important;
+}
+
+/* 
+ * Leftovers from old solution for schedule using table.
+th { 
+    background-color: #41c5f6;
+    color: black;
+}
+
+td:first-child {
+    font-weight: bold;
+    text-align: center;
+} */
+@media (min-width: 1000px) {
+  /* line 228, sass/style.scss */
+  .hero__layout_profile {
+    padding: 70px 0 0px !important;
+  }
+}
+@media (max-width: 765px) {
+  /* line 234, sass/style.scss */
+  element.style {
+    font-size: 2.1EM;
+  }
+}
+/* line 239, sass/style.scss */
+.speakers__photo,
+.speaker-info__pic,
+.schedule__speaker-pic {
+  -webkit-filter: grayscale(100%);
+  /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  transition: all 0.35s ease;
+}
+
+/* line 248, sass/style.scss */
+.speakers__photo:hover,
+.speaker-info__pic:hover,
+.schedule__speaker-pic:hover {
+  -webkit-filter: grayscale(0%);
+  /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
+}
+
+/* line 256, sass/style.scss */
+.schedule__speaker-hover {
+  display: none;
+}
+
+/* line 260, sass/style.scss */
+.speaker-profile .description {
+  padding: 0px 15px 0px;
+}
+
+@media (min-width: 768px) {
+  /* line 265, sass/style.scss */
+  .speakers {
+    padding: 85px 0 0px;
+  }
+}
+/* line 270, sass/style.scss */
+.speaker-info {
+  position: relative;
+  padding: 10px 30px 10px;
+  text-align: left;
+}
+
+/* line 276, sass/style.scss */
+#tab {
+  display: inline-block;
+  margin-left: 2%;
+}
+
+/* line 283, sass/style.scss */
+.header-menu__wrap .menu > .menu-item > a {
+  font-weight: bold;
+}
+
+/* line 289, sass/style.scss */
+.sub-menu li.menu-item a {
+  margin: 0 0 3px;
+}
+
+/* line 293, sass/style.scss */
+.header-menu .sub-menu {
+  width: 200px;
+}
+
+/* line 297, sass/style.scss */
+.tickets__price {
+  font-weight: 400;
+}
+
+/* line 301, sass/style.scss */
+.tickets__status {
+  margin-bottom: 16px;
+  line-height: 27px;
+}
+
+@media (min-width: 768px) {
+  /* line 307, sass/style.scss */
+  .tickets__item {
+    min-height: 391px;
+    padding: 40px 38px 30px 46px;
+  }
+}
+/* line 313, sass/style.scss */
+.tickets {
+  padding: 30px 0 0px;
+}
+
+/* line 317, sass/style.scss */
+h2.site__title {
+  padding-bottom: 0px;
+}
+
+/* line 321, sass/style.scss */
+.tickets p {
+  margin: -20px 7px 32px;
+}
+
+/* line 327, sass/style.scss */
+a {
+  color: #0075b8;
+}
+
+/* line 331, sass/style.scss */
+body,
+.placeholder,
+.social a,
+.site__title,
+.site__form textarea,
+.site__form input,
+.site__form-sent,
+.btn,
+.header-menu__wrap .menu-item a.btn:hover,
+.header-menu__wrap .menu-item a.active,
+.sub-menu li.menu-item a:hover,
+.sub-menu li.menu-item a.active,
+.sub-menu li.menu-item a,
+.header-menu .opened .menu-item a,
+.time-schedule__save a:hover i,
+.countdown-timer,
+.description__watch-video,
+.speakers__person,
+.schedule__date-btn,
+.schedule__date-btn.active,
+.schedule__time span,
+.schedule__main-place:hover,
+.schedule__speaker-name,
+.tickets__item_best:before,
+.features__logo,
+.header-menu .opened .menu-item a,
+.header-menu__wrap .menu-item a.btn,
+.sub-menu li.menu-item a,
+.header-menu__wrap .menu > .menu-item > a.btn,
+.exhibitors__filters .site__form span,
+.features__title,
+.contact-us__content-double dt,
+.contact-us p {
+  color: black;
+}
+
+/* line 368, sass/style.scss */
+.hero-sample__page .hero__layout {
+  padding: 28px 0 16px;
+}
+
+/* line 372, sass/style.scss */
+.hero__layout .time-schedule .site__title::after {
+  background: none;
+}
+
+@media (min-width: 768px) {
+  /* line 377, sass/style.scss */
+  .hero__layout {
+    padding: 100px 0 0px;
+  }
+
+  /* line 381, sass/style.scss */
+  .hero__layout_profile {
+    margin-top: 48px;
+  }
+}
+/* line 386, sass/style.scss */
+.btn:hover,
+.header-menu__wrap .menu-item a.btn:hover {
+  color: #6A93DA;
+  border-color: #6A93DA;
+}
+
+@media (min-width: 1000px) {
+  /* line 393, sass/style.scss */
+  .time-schedule {
+    padding: 0px 0 30px;
+  }
+}
+/* line 398, sass/style.scss */
+.site__title::after,
+.speakers,
+.schedule__concurrent::after {
+  background-color: transparent;
+}
+
+@media (min-width: 768px) {
+  /* line 405, sass/style.scss */
+  .description {
+    padding: 50px 0 25px;
+  }
+}
+/* line 410, sass/style.scss */
+.description p {
+  margin: 20px 0 33px;
+  text-align: left;
+}
+
+/* line 415, sass/style.scss */
+.sponsors__item {
+  text-align: center;
+}
+
+/* line 419, sass/style.scss */
+.sponsors__item.sponsors__item_gold a {
+  display: inline-block;
+  margin: 12px;
+}
+
+/* line 424, sass/style.scss */
+.table-overflow {
+  overflow: auto;
+}
+
+@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Hide table headers (but not display: none;, for accessibility) */
+  /* line 433, sass/style.scss */
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  /* line 439, sass/style.scss */
+  tr {
+    border: 1px solid #ccc;
+  }
+
+  /* line 443, sass/style.scss */
+  td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  /* line 451, sass/style.scss */
+  td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+}
+/* line 463, sass/style.scss */
+.tablepress.program {
+  width: 100%;
+}
+
+/* line 467, sass/style.scss */
+.tablepress.program th {
+  width: calc(90%/5);
+  background: #E15D3C;
+  color: white;
+}
+
+/* line 473, sass/style.scss */
+.tablepress.program th a,
+.tablepress.program th a:link,
+.tablepress.program th a:visited {
+  color: white;
+}
+
+/* line 479, sass/style.scss */
+.tablepress.program th:first-child {
+  width: 10%;
+}
+
+/* line 483, sass/style.scss */
+.schedule__speaker-pic {
+  background-color: white;
+  background-size: contain;
+  background-position: center center;
+}
+
+/* line 489, sass/style.scss */
+.schedule__info .schedule__time span {
+  color: white;
+}
+
+/* line 493, sass/style.scss */
+.schedule__info .btn,
+.schedule__info .btn:link,
+.schedule__info .btn:visited {
+  color: white;
+}
+
+/* line 499, sass/style.scss */
+.schedule__time span {
+  color: white;
+}
+
+/* line 503, sass/style.scss */
+.site__call-to-action {
+  color: #222;
+  background: #d9ff39;
+  border: 1px solid #c0ed0d;
+  text-decoration: none !important;
+  border-radius: 2rem;
+  box-shadow: none;
+}
+
+/* line 512, sass/style.scss */
+.site__call-to-action:hover {
+  color: white;
+  text-decoration: underline !important;
+}
+
+/* line 517, sass/style.scss */
+.wp-block-nk-awb .heading--entry .col-12.col-lg-10 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+/* line 522, sass/style.scss */
+.wp-block-nk-awb .heading--entry h6,
+.wp-block-nk-awb .heading--entry h1 {
+  background: rgba(229, 53, 9, 0.9);
+  padding: 1rem;
+  color: white;
+  margin: 0;
+}
+
+/* line 530, sass/style.scss */
+.wp-block-nk-awb .heading--entry h6 {
+  font-size: 1.6rem;
+  padding: 1rem 1rem 0rem 1rem;
+}
+
+/* line 535, sass/style.scss */
+.wp-block-nk-awb .heading--entry h1 {
+  padding: 0rem 1rem 0rem 1rem;
+}
+
+/* line 539, sass/style.scss */
+.wp-block-nk-awb .wp-block-columns,
+.wp-block-nk-awb > p {
+  background: rgba(229, 53, 9, 0.9);
+  color: white;
+}
+
+/* line 545, sass/style.scss */
+.wp-block-nk-awb > p {
+  background: rgba(229, 53, 9, 0.9);
+  color: white;
+  margin: 0;
+  padding: 0 1rem 1rem 1rem;
+}
+
+/* line 552, sass/style.scss */
+.wp-block-nk-awb.kunnskapsbla .heading--entry h6,
+.wp-block-nk-awb.kunnskapsbla .heading--entry h1,
+.wp-block-nk-awb.kunnskapsbla > p,
+.wp-block-nk-awb.kunnskapsbla .wp-block-columns {
+  background: rgba(4, 55, 66, 0.9);
+}
+
+/* line 559, sass/style.scss */
+.wp-block-nk-awb .wp-block-columns .wp-block-column ul,
+.wp-block-nk-awb .wp-block-columns .wp-block-column li {
+  list-style: none;
+  padding: 0;
+}
+
+/* line 565, sass/style.scss */
+.wp-block-nk-awb .wp-block-columns .wp-block-column {
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* line 570, sass/style.scss */
+.wp-block-nk-awb .wp-block-columns .wp-block-column:last-child {
+  margin-bottom: 1rem;
+}
+
+/* line 574, sass/style.scss */
+.wp-block-nk-awb .wp-block-columns .wp-block-column ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 579, sass/style.scss */
+.wp-block-pixudio-cta.cta--no-padding {
+  padding: 0;
+}
+
+/* line 583, sass/style.scss */
+.wp-block-nk-awb .wp-block-pixudio-cta {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 588, sass/style.scss */
+.wp-block-nk-awb .cta__copy h5 {
+  display: none;
+}
+
+/* line 592, sass/style.scss */
+.wp-block-nk-awb .cta__copy p {
+  padding: 0;
+  margin-top: 10px;
+}
+
+/* line 597, sass/style.scss */
+.wp-block-pixudio-countdown.section,
+.wp-block-pixudio-countdown.section--first {
+  padding: 0;
+}
+
+/* line 602, sass/style.scss */
+.wp-block-pixudio-countdown .countdown__el.col-12 {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+/* line 607, sass/style.scss */
+.wp-block-pixudio-countdown .countdown__el.col-12 .countdown__count {
+  font-size: 28px;
+  line-height: 32px;
+}
+
+@media screen and (min-width: 768px) {
+  /* line 613, sass/style.scss */
+  .wp-block-nk-awb .wp-block-columns .wp-block-column {
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+
+  /* line 618, sass/style.scss */
+  .wp-block-nk-awb .wp-block-columns .wp-block-column:first-child {
+    text-align: right;
+  }
+
+  /* line 622, sass/style.scss */
+  .wp-block-pixudio-countdown .countdown__el.col-12 .countdown__count {
+    font-size: 72px;
+    line-height: 80px;
+  }
+}
+/* line 628, sass/style.scss */
+.page-id-9755 .wp-block-pixudio-speakers {
+  padding: 0;
+}
+
+/* line 632, sass/style.scss */
+.page-id-9755 .speakers {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 0;
+}
+
+/* line 638, sass/style.scss */
+.page-id-9755 .speakers .board {
+  margin-bottom: 1rem;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+/* line 645, sass/style.scss */
+.page-id-9755 .speakers .board .row {
+  display: block;
+  padding: 0;
+}
+
+/* line 650, sass/style.scss */
+.page-id-9755 .speakers .board .row h2 {
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+}
+
+/* line 655, sass/style.scss */
+.page-id-9755 .speakers .board.board--right .order-md-2 {
+  order: 1;
+}
+
+/* line 659, sass/style.scss */
+.page-id-9755 .speakers .board .col-md-6 {
+  width: 100%;
+  max-width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  /* line 666, sass/style.scss */
+  .page-id-9755 .speakers {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  /* line 671, sass/style.scss */
+  .page-id-9755 .speakers .board {
+    margin-bottom: 1rem;
+    max-width: 50%;
+    box-sizing: border-box;
+    padding: 1rem;
+  }
+
+  /* line 678, sass/style.scss */
+  .page-id-9755 .speakers .board .row {
+    display: block;
+    padding: 0;
+  }
+
+  /* line 683, sass/style.scss */
+  .page-id-9755 .speakers .board .row h2 {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+  }
+
+  /* line 688, sass/style.scss */
+  .page-id-9755 .speakers .board.board--right .order-md-2 {
+    order: 1;
+  }
+
+  /* line 692, sass/style.scss */
+  .page-id-9755 .speakers .board .col-md-6 {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  /* line 699, sass/style.scss */
+  .page-id-9755 .speakers .board {
+    max-width: 25%;
+  }
+}
+/* line 704, sass/style.scss */
+.wcs-filters--switches input:checked + .wcs-switcher__switch {
+  color: #5fbc83;
+}
+
+/* line 708, sass/style.scss */
+.pricing__item__cta {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 713, sass/style.scss */
+.pricing__item__cta .btn--primary {
+  background-color: #5fbc83;
+  color: white;
+}
+
+/* line 718, sass/style.scss */
+.advgb-recent-posts {
+  max-width: 80%;
+  margin: 4rem auto 0 auto;
+}
+
+/* line 723, sass/style.scss */
+.columns-1 .advgb-recent-posts {
+  max-width: 66.666%;
+}
+
+/* line 727, sass/style.scss */
+.advgb-post-thumbnail img {
+  height: 12rem;
+  object-fit: cover;
+}
+
+/* line 732, sass/style.scss */
+.advgb-post-title {
+  line-height: 1.5;
+}
+
+/* line 738, sass/style.scss */
+.thumbnails--circle .advgb-post-thumbnail {
+  text-align: center;
+}
+
+/* line 742, sass/style.scss */
+.thumbnails--circle .advgb-post-thumbnail img {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+}
+
+/* line 748, sass/style.scss */
+.thumbnails--circle .advgb-post-wrapper h2 {
+  word-break: wrap;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  /* line 754, sass/style.scss */
+  .advgb-recent-posts {
+    max-width: 100%;
+  }
+
+  /* line 758, sass/style.scss */
+  .advgb-recent-posts-block.grid-view .advgb-recent-posts {
+    grid-template-columns: 1fr !important;
+  }
+}
+/* line 763, sass/style.scss */
+.advgb-recent-posts-block.slider-view button.slick-arrow {
+  background: white;
+  color: #222;
+}
+
+/* line 768, sass/style.scss */
+.advgb-recent-posts-block.slider-view button.slick-arrow::before {
+  position: relative;
+  top: 5px;
+}
+
+/* line 773, sass/style.scss */
+.wcs-class__duration span {
+  display: none;
+}
+
+/* line 777, sass/style.scss */
+.wcs-class__duration::after {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* line 784, sass/style.scss */
+.wcs-class--term-digitalt-lederskap .wcs-class__duration::after {
+  content: "Track 1";
+}
+
+/* line 788, sass/style.scss */
+.wcs-class--term-blokkjeder-fra-hype-til-virkelighet .wcs-class__duration::after {
+  content: "Track 2";
+}
+
+/* line 792, sass/style.scss */
+.wcs-class--term-datadeling-i-praksis .wcs-class__duration::after {
+  content: "Track 3";
+}
+
+/* line 796, sass/style.scss */
+.wcs-class--term-digitale-gevinster .wcs-class__duration::after {
+  content: "Track 4";
+}
+
+/* line 800, sass/style.scss */
+.wcs-class--term-dine-data .wcs-class__duration::after {
+  content: "Track 5";
+}
+
+/* line 804, sass/style.scss */
+.wcs-class--term-kunstig-hverdagsintelligens .wcs-class__duration::after {
+  content: "Track 6";
+}
+
+/* line 808, sass/style.scss */
+.wcs-class--term-sikkerhet-i-skyen .wcs-class__duration::after {
+  content: "Track 7";
+}
+
+/* line 812, sass/style.scss */
+.wcs-class--term-a-skyte-seg-selv-i-foten .wcs-class__duration::after {
+  content: "Track 8";
+}
+
+/* line 816, sass/style.scss */
+.wcs-class--term-felles-dag1 .wcs-class__duration::after {
+  content: "Felles 1";
+}
+
+/* line 820, sass/style.scss */
+.wcs-class--term-felles-dag-2 .wcs-class__duration::after {
+  content: "Felles 2";
+}
+
+/* line 824, sass/style.scss */
+.wcs-class--term-pause .wcs-class__duration::after {
+  content: "Pause";
+}
+
+/* line 828, sass/style.scss */
+.wp-block-pixudio-sponsors .col-4 {
+  max-width: 50%;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+}
+
+/* line 834, sass/style.scss */
+.wp-block-pixudio-sponsors .col-4 figure {
+  min-height: 50px;
+}
+
+/* line 838, sass/style.scss */
+.wp-block-pixudio-sponsors .col-2 {
+  max-width: 100%;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+}
+
+/* line 844, sass/style.scss */
+.wp-block-pixudio-sponsors .col-2 figure {
+  min-height: 100px;
+}
+
+/* line 848, sass/style.scss */
+.speaker__title {
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+/*
+.poster figure .lazyload--el{
+	object-fit:contain;
+}*/
+/* line 4, sass/tracks.scss */
+.wcs-class--term-spor-1 .wcs-class__duration:after {
+  content: "Spor 1";
+}
+
+/* line 4, sass/tracks.scss */
+.wcs-class--term-spor-2 .wcs-class__duration:after {
+  content: "Spor 2";
+}
+
+/* line 4, sass/tracks.scss */
+.wcs-class--term-spor-3 .wcs-class__duration:after {
+  content: "Spor 3";
+}
+
+/* line 4, sass/tracks.scss */
+.wcs-class--term-spor-4 .wcs-class__duration:after {
+  content: "Spor 4";
+}
+
+/* line 4, sass/tracks.scss */
+.wcs-class--term-spor-5 .wcs-class__duration:after {
+  content: "Spor 5";
+}
+
+/* line 4, sass/tracks.scss */
+.wcs-class--term-spor-6 .wcs-class__duration:after {
+  content: "Spor 6";
+}
+
+/* line 4, sass/tracks.scss */
+.wcs-class--term-spor-7 .wcs-class__duration:after {
+  content: "Spor 7";
+}
+
+/* line 4, sass/tracks.scss */
+.wcs-class--term-spor-8 .wcs-class__duration:after {
+  content: "Spor 8";
+}
+
+/* line 4, sass/tracks.scss */
+.wcs-class--term-spor-9 .wcs-class__duration:after {
+  content: "Spor 9";
+}
+
+/* line 4, sass/tracks.scss */
+.wcs-class--term-spor-10 .wcs-class__duration:after {
+  content: "Spor 10";
+}
+
+/* line 12, sass/tracks.scss */
+.wcs-class--term-workshop-1 .wcs-class__duration:after {
+  content: "WS 1";
+}
+
+/* line 12, sass/tracks.scss */
+.wcs-class--term-workshop-2 .wcs-class__duration:after {
+  content: "WS 2";
+}
+
+/* line 20, sass/tracks.scss */
+.wcs-class--term-pause-1 .wcs-class__duration:after {
+  content: "Pause";
+}
+
+/* line 20, sass/tracks.scss */
+.wcs-class--term-pause-2 .wcs-class__duration:after {
+  content: "Pause";
+}
+
+/* line 20, sass/tracks.scss */
+.wcs-class--term-pause-3 .wcs-class__duration:after {
+  content: "Pause";
+}
+
+/* line 20, sass/tracks.scss */
+.wcs-class--term-pause-4 .wcs-class__duration:after {
+  content: "Pause";
+}
+
+/* line 20, sass/tracks.scss */
+.wcs-class--term-pause-5 .wcs-class__duration:after {
+  content: "Pause";
+}
+
+/* line 26, sass/tracks.scss */
+.wcs-class--term-spor-1,
+.wcs-class--term-spor-6 {
+  background: rgba(127, 113, 162, 0.2);
+}
+
+/* line 30, sass/tracks.scss */
+.wcs-class--term-spor-2,
+.wcs-class--term-spor-7 {
+  background: rgba(244, 115, 85, 0.2);
+}
+
+/* line 35, sass/tracks.scss */
+.wcs-class--term-spor-3,
+.wcs-class--term-spor-8 {
+  background: rgba(95, 188, 131, 0.2);
+}
+
+/* line 40, sass/tracks.scss */
+.wcs-class--term-spor-4,
+.wcs-class--term-spor-9 {
+  background: rgba(232, 177, 113, 0.2);
+}
+
+/* line 45, sass/tracks.scss */
+.wcs-class--term-spor-5,
+.wcs-class--term-spor-10 {
+  background: rgba(201, 252, 49, 0.2);
+}
+
+/* line 50, sass/tracks.scss */
+.wcs-class--term-workshop-1 {
+  background: #043742;
+  color: white;
+}
+/* line 53, sass/tracks.scss */
+.wcs-class--term-workshop-1 * {
+  color: white;
+}
+
+/* line 58, sass/tracks.scss */
+.wcs-class--term-workshop-2 {
+  background: #802d30;
+  color: white;
+}
+/* line 61, sass/tracks.scss */
+.wcs-class--term-workshop-2 * {
+  color: white;
+}
+
+@media screen and (min-width: 992px) {
+  /* line 3, sass/personer.scss */
+  .entry-content .lecturers {
+    width: 920px;
+    max-width: 100%;
+  }
+  /* line 8, sass/personer.scss */
+  .entry-content .wcs-single-left .lecturers, .entry-content .wcs-single.right .lecturers {
+    width: 100%;
+  }
+}
+/* line 16, sass/personer.scss */
+.partner-blokk .lecturers {
+  margin: 0;
+  padding: 0;
+}
+/* line 19, sass/personer.scss */
+.partner-blokk .lecturers .lecturer {
+  margin: 0;
+  padding: 0;
+}
+/* line 24, sass/personer.scss */
+.partner-blokk .partner {
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+/* line 27, sass/personer.scss */
+.partner-blokk .partner .advgb-columns {
+  align-items: center;
+}
+/* line 30, sass/personer.scss */
+.partner-blokk .partner .advgb-columns .wp-block-advgb-column:first-of-type {
+  width: none;
+  min-width: 270px;
+  max-width: 300px;
+}
+/* line 35, sass/personer.scss */
+.partner-blokk .partner .advgb-columns .wp-block-advgb-column:last-of-type {
+  flex-grow: 5;
+  flex-shrink: 1;
+}
+@media screen and (min-width: 768px) {
+  /* line 35, sass/personer.scss */
+  .partner-blokk .partner .advgb-columns .wp-block-advgb-column:last-of-type {
+    padding-left: 2rem;
+  }
+}
+
+/* line 1, sass/rss.scss */
+.wp-block-rss {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0;
+}
+/* line 6, sass/rss.scss */
+.wp-block-rss .wp-block-rss__item {
+  flex-grow: 1;
+  width: 100%;
+  margin: 0;
+  list-style: none;
+  padding: 1rem;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+}
+@media screen and (min-width: 768px) {
+  /* line 6, sass/rss.scss */
+  .wp-block-rss .wp-block-rss__item {
+    width: 31%;
+    margin: 1%;
+  }
+}
+/* line 18, sass/rss.scss */
+.wp-block-rss .wp-block-rss__item .wp-block-rss__item-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* line 2, sass/scehduleviews.scss */
+.dnd-schedule.dayview {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0;
+  width: 100% !important;
+}
+/* line 7, sass/scehduleviews.scss */
+.dnd-schedule.dayview .ab-container-content {
+  min-width: 1200px;
+}
+/* line 9, sass/scehduleviews.scss */
+.dnd-schedule.dayview .ab-container-content .wp-block-advgb-columns {
+  min-width: 1200px;
+}
+/* line 11, sass/scehduleviews.scss */
+.dnd-schedule.dayview .ab-container-content .wp-block-advgb-columns h4 {
+  height: 32px;
+}
+/* line 15, sass/scehduleviews.scss */
+.dnd-schedule.dayview .ab-container-content .advgb-columns-3 .advgb-column {
+  width: 33.3% !important;
+}
+/* line 18, sass/scehduleviews.scss */
+.dnd-schedule.dayview .ab-container-content .advgb-columns-4 .advgb-column {
+  width: 25% !important;
+}
+/* line 21, sass/scehduleviews.scss */
+.dnd-schedule.dayview .ab-container-content .advgb-columns-5 .advgb-column {
+  width: 20% !important;
+}
+/* line 24, sass/scehduleviews.scss */
+.dnd-schedule.dayview .ab-container-content .wcs-timetable__agenda .wcs-timetable__agenda-data .wcs-class {
+  height: 200px;
+}
+/* line 32, sass/scehduleviews.scss */
+.dnd-schedule.fellesview .wcs-timetable--large .wcs-table__tr .wcs-table__td {
+  padding: 5px !important;
+}
+/* line 34, sass/scehduleviews.scss */
+.dnd-schedule.fellesview .wcs-timetable--large .wcs-table__tr .wcs-table__td:first-of-type {
+  min-width: 150px;
+}
+/* line 40, sass/scehduleviews.scss */
+.dnd-schedule.fellesview .wcs-timetable__list .wcs-class {
+  min-height: unset;
+}
+/* line 43, sass/scehduleviews.scss */
+.dnd-schedule.fellesview .wcs-timetable__list .wcs-class .wcs-class__time {
+  display: none;
+}
+/* line 46, sass/scehduleviews.scss */
+.dnd-schedule.fellesview .wcs-timetable__list .wcs-class .wcs-class__meta {
+  margin: 5px;
+}
+/* line 48, sass/scehduleviews.scss */
+.dnd-schedule.fellesview .wcs-timetable__list .wcs-class .wcs-class__meta h3 {
+  font-size: 16px;
+}
+/* line 52, sass/scehduleviews.scss */
+.dnd-schedule.fellesview .wcs-timetable__list .wcs-class .wcs-class__image {
+  height: 125px;
+}
+/* line 56, sass/scehduleviews.scss */
+.dnd-schedule.fellesview .wcs-class__excerpt p {
+  margin: 0;
+  padding: 0;
+}
+/* line 59, sass/scehduleviews.scss */
+.dnd-schedule.fellesview .wcs-class__excerpt p img {
+  width: 75px;
+  height: 75px;
+  display: inline-block;
+  margin: 3px;
+  padding: 0;
+  object-fit: cover;
+}
+
+/* line 1, sass/timetable.scss */
+.wcs-timetable--large .wcs-class__time {
+  letter-spacing: 0;
+}
+
+/* line 8, sass/timetable.scss */
+.wcs-modal .wcs-modal__box .wcs-modal__inner .wcs-modal__close {
+  display: flex;
+  align-items: center;
+}
+/* line 12, sass/timetable.scss */
+.wcs-modal .wcs-modal__box .wcs-modal__inner .wcs-modal__close.ti-close::before {
+  content: "\e629";
+}
+@media screen and (min-width: 992px) {
+  /* line 8, sass/timetable.scss */
+  .wcs-modal .wcs-modal__box .wcs-modal__inner .wcs-modal__close {
+    left: 0;
+    right: auto;
+  }
+}
+
+/* line 1, sass/advgb-recent-posts.scss */
+body.page--blocks .entry-content > div.advgb-recent-posts-block {
+  background: #f2f2f2;
+  padding: 4rem 1rem;
+  margin: 0 -1rem;
+  width: 100%;
+  box-sizing: content-box;
+}
+/* line 10, sass/advgb-recent-posts.scss */
+body.page--blocks .entry-content > div.advgb-recent-posts-block .advgb-recent-posts {
+  max-width: 960px;
+  margin: 0 auto;
+}
+/* line 13, sass/advgb-recent-posts.scss */
+body.page--blocks .entry-content > div.advgb-recent-posts-block .advgb-recent-posts .advgb-recent-post {
+  padding: 0;
+  border-radius: 0;
+  background: white;
+}
+/* line 17, sass/advgb-recent-posts.scss */
+body.page--blocks .entry-content > div.advgb-recent-posts-block .advgb-recent-posts .advgb-recent-post .advgb-post-wrapper {
+  padding: 0.75rem;
+}
+
+/* line 3, sass/color-classes.scss */
+.bg-color-grey {
+  background-color: #cccccc;
+}
+
+/* line 4, sass/color-classes.scss */
+.bg-color-grey-light {
+  background-color: #f4f4f4;
+}
+
+/* line 5, sass/color-classes.scss */
+.bg-color-grey-dark {
+  background-color: #444444;
+}
+
+/* line 6, sass/color-classes.scss */
+.bg-color-grey-charcoal {
+  background-color: #242424;
+}
+
+/* line 7, sass/color-classes.scss */
+.bg-color-grey-warm {
+  background-color: #cfcfcc;
+}
+
+/* line 8, sass/color-classes.scss */
+.bg-color-grey-warm-light {
+  background-color: #f3f3ee;
+}
+
+/* line 9, sass/color-classes.scss */
+.bg-color-grey-warm-dark {
+  background-color: #464642;
+}
+
+/* line 10, sass/color-classes.scss */
+.bg-color-grey-cool {
+  background-color: #cccccf;
+}
+
+/* line 1, sass/custom-tweaks.scss */
+.width-1600 {
+  width: 1600px !important;
+  max-width: 100% !important;
+}
