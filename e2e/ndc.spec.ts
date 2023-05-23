@@ -1,9 +1,9 @@
 import { test, expect } from "@playwright/test";
 import percySnapshot from "@percy/playwright";
 
-test("NDC homepage page looks good", async ({ page }) => {
+test("NDC homepage looks good", async ({ page }) => {
   // Wait until page is fully loaded
-  await page.goto("https://ndcoslo.com/", {
+  await page.goto("/ndc_oslo_index.html", {
     waitUntil: "networkidle",
   });
   // await page.waitForTimeout(5000);
@@ -11,10 +11,10 @@ test("NDC homepage page looks good", async ({ page }) => {
   // transitionDiv.
 
   // Dismiss cookie notice
-  await page
-    .locator("div.cookie-notice__button")
-    .getByText("Don't want it")
-    .click();
+  // await page
+  //   .locator("div.cookie-notice__button")
+  //   .getByText("Don't want it")
+  //   .click();
 
   // await page
   //   .locator(".links__container")
@@ -33,7 +33,7 @@ test("NDC homepage page looks good", async ({ page }) => {
   //   .evaluate((element) => (element.style.opacity = "1"));
 
   // Take a snapshot and send to Percy
-  await percySnapshot(page, "NDC program page", {
+  await percySnapshot(page, "NDC home page", {
     percyCSS: ".page-transition {opacity: 1 !important;}",
   });
 });
