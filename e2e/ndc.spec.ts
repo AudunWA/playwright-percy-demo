@@ -6,33 +6,28 @@ test("NDC homepage looks good", async ({ page }) => {
   await page.goto("/ndc_oslo_index.html", {
     waitUntil: "networkidle",
   });
-  // await page.waitForTimeout(5000);
-  // const transitionDiv = await page.locator(".page-transition").elementHandle();
-  // transitionDiv.
-
-  // Dismiss cookie notice
+  // Uncomment if you want to dismiss cookie notice
   // await page
   //   .locator("div.cookie-notice__button")
   //   .getByText("Don't want it")
   //   .click();
 
+  // Uncomment to make some "unintentional" CSS changes
+  // await page
+  //   .locator(".main__header-title")
+  //   .evaluate((element) => (element.style.marginLeft = "-10px"));
   // await page
   //   .locator(".links__container")
   //   .evaluate((element) => (element.style.marginTop = "-70px"));
-  // await page.locator(".main__header-center").evaluate((element) => {
-  //   element.style.fontSize = "24px";
-  // });
   // await page
-  //   .locator(".jsx-3601836161")
-  //   .getByText("Get Tickets")
+  //   .locator(".menu__item--link-white")
+  //   .getByText("Tickets")
   //   .evaluate((element) => {
   //     element.remove();
   //   });
-  // await page
-  //   .locator(".page-transition")
-  //   .evaluate((element) => (element.style.opacity = "1"));
 
   // Take a snapshot and send to Percy
+  // Set opacity of main content to 1 as it the frozen animation starts at opacity 0
   await percySnapshot(page, "NDC home page", {
     percyCSS: ".page-transition {opacity: 1 !important;}",
   });

@@ -1,5 +1,7 @@
 # Playwright + Percy for visual regression testing
-A simple demo of Playwright + Percy used at the [Odin conference 2022](https://event.dnd.no/odin/).
+
+A simple demo of Playwright + Percy used at NDC 2023.
 
 ## The presentation
-See https://github.com/AudunWA/playwright-percy-demo/blob/main/Presentation.pdf for the presentation (in Norwegian).
+
+See https://github.com/AudunWA/playwright-percy-demo/blob/main/docs for the presentations (both English and Norwegian version).
